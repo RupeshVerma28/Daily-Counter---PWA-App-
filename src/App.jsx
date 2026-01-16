@@ -13,7 +13,7 @@ function App() {
       <div className="full-screen">
         <Navbar onHistoryToggle={() => setIsHistoryOpen(true)} />
 
-        <main style={{ flex: 1, display: 'flex', flexDirection: 'column', position: 'relative' }}>
+        <main style={{ flex: 1, display: 'flex', flexDirection: 'column', position: 'relative', overflowY: 'auto', overflowX: 'hidden' }}>
           <CounterDisplay />
           <AchievementBanner />
         </main>
