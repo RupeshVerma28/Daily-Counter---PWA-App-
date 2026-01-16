@@ -62,12 +62,28 @@ export function useCounterStorage() {
     setData(prev => ({ ...prev, count: newCount }));
   }, []);
 
+  const deleteHistoryItem = useCallback((index) => {
+    setData(prev => ({
+      ...prev,
+      history: prev.history.filter((_, i) => i !== index)
+    }));
+  }, []);
+
+  const clearAllHistory = useCallback(() => {
+    setData(prev => ({
+      ...prev,
+      history: []
+    }));
+  }, []);
+
   return {
     count: data.count,
     increment,
     resetCount,
     setCount,
     history: data.history,
-    lastDate: data.lastDate
+    lastDate: data.lastDate,
+    deleteHistoryItem,
+    clearAllHistory
   };
 }

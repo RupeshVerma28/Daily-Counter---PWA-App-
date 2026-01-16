@@ -14,8 +14,8 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['icon.svg'],
       manifest: {
-        name: 'CountMaster - The Ultimate Counter',
-        short_name: 'CountMaster',
+        name: 'Talley Counter - The Ultimate Counter',
+        short_name: 'Talley Counter',
         description: 'A premium daily counter game with achievements.',
         theme_color: '#050505',
         background_color: '#050505',
